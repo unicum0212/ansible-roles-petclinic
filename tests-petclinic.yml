@@ -1,0 +1,9 @@
+---
+- name: Testing Java PetClinic Application
+  hosts: blue
+  ignore_unreachable: true
+  become: yes
+
+  roles:
+    - pull_repository
+    - testing_petclinic

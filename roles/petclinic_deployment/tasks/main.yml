@@ -1,0 +1,37 @@
+---
+# tasks file for deploying_petclinic
+- name: Change permissions for mvnw file
+  file:
+    path: "{{ home_dir }}/mvnw"
+    owner: ubuntu
+    group: ubuntu
+    mode: "0775"
+
+- name: Convert mvnw file to UNIX format
+  shell:
+    cmd: dos2unix mvnw
+    chdir: "{{ home_dir }}"
+
+- name: Install wrapper
+  shell:
+    cmd: mvn -N io.takari:maven:wrapper
+    chdir: "{{ home_dir }}"
+
+- shell:
+    cmd: mvn spring-javaformat:apply
+    chdir: "{{ home_dir }}"
+
+
+- name: Stop Apache Server
+  service:
+    name: apache2
+    state: stopped
+    enabled: false
+
+- name: Deploy app
+  shell:
+    cmd: mvn spring-boot:run -Dcheckstyle.skip -Dspring-boot.run.profiles=mysql > /de>
+    chdir: "{{ home_dir }}"
+  async: 10
+  poll: 0
+

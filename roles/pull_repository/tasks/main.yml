@@ -1,0 +1,12 @@
+---
+# tasks file for pull_repository
+- name: Install git
+  apt:
+    name: git
+    state: latest
+    update_cache: yes
+
+- name: Pull repo
+  git:
+    repo: https://github.com/unicum0212/petclinic-java.git
+    dest: "{{ home_dir }}"

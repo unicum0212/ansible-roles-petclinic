@@ -1,0 +1,6 @@
+---
+# tasks file for testing_petclinic
+- name: Starting tests
+  shell:
+    cmd: mvn spring-javaformat:apply -Dcheckstyle.skip test
+    chdir: "{{ home_dir }}"

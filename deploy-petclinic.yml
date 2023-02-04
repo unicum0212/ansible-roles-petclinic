@@ -1,0 +1,8 @@
+---
+- name: Deploy PetClinic App
+  hosts: blue
+  ignore_unreachable: true
+  become: yes
+
+  roles:
+    - petclinic_deployment
