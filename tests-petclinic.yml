@@ -1,6 +1,6 @@
 ---
 - name: Testing Java PetClinic Application
-  hosts: blue
+  hosts: tag_Status_Clean
   ignore_unreachable: true
   become: yes
 

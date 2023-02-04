@@ -1,6 +1,6 @@
 ---
 - name: Deploy PetClinic App
-  hosts: blue
+  hosts: tag_Status_Clean
   ignore_unreachable: true
   become: yes
 
