@@ -4,3 +4,7 @@
   shell:
     cmd: mvn spring-javaformat:apply -Dcheckstyle.skip test
     chdir: "{{ home_dir }}"
+  register: result
+
+- debug: 
+    var: result
