@@ -32,7 +32,7 @@
   shell:
     cmd: mvn spring-boot:run -Dcheckstyle.skip -Dspring-boot.run.profiles=mysql > /de>
     chdir: "{{ home_dir }}"
-  async: 600
+  async: 10
   poll: 0
   register: result
   
