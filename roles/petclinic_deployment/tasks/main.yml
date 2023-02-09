@@ -34,4 +34,8 @@
     chdir: "{{ home_dir }}"
   async: 600
   poll: 0
+  register: result
+  
+- debug: 
+    var: result
 
