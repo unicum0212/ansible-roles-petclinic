@@ -2,5 +2,9 @@
 # tasks file for testing_petclinic
 - name: Starting tests
   shell:
-    cmd: mvn spring-javaformat:apply -Dcheckstyle.skip test > /home/ubuntu/test-logs.txt
+    cmd: mvn spring-javaformat:apply -Dcheckstyle.skip test
     chdir: "{{ home_dir }}"
+  register: result
+  
+- debug:
+  var: result > /home/ubuntu/tests-logs.txt
