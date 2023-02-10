@@ -1,6 +1,6 @@
 ---
 - name: Testing Java PetClinic Application
-  hosts: tag_Status_Clean
+  hosts: "{{ hosts_tag }}"
   ignore_unreachable: true
   become: yes
 
