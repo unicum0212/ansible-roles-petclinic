@@ -30,7 +30,7 @@
 
 - name: Deploy app
   shell:
-    cmd: mvn spring-boot:run -Dcheckstyle.skip  > deplyment_logs.txt
+    cmd: mvn spring-boot:run -Dcheckstyle.skip
     chdir: "{{ home_dir }}"
   async: 10
   poll: 0
