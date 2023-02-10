@@ -7,4 +7,4 @@
   register: result
   
 - debug:
-  var: result > /home/ubuntu/tests-logs.txt
+    var: result > /home/ubuntu/tests-logs.txt
