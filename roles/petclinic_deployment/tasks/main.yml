@@ -30,7 +30,7 @@
 
 - name: Deploy app
   shell:
-    cmd: mvn spring-boot:run -Dcheckstyle.skip -Dspring-boot.run.profiles=mysql > /home/ubuntu/deploy-logs.txt
+    cmd: mvn spring-boot:run -Dcheckstyle.skip -Dspring-boot.run.profiles=mysql
     chdir: "{{ home_dir }}"
   async: 10
   poll: 0
