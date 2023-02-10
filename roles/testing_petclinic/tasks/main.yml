@@ -2,11 +2,5 @@
 # tasks file for testing_petclinic
 - name: Starting tests
   shell:
-    cmd: mvn spring-javaformat:apply -Dcheckstyle.skip test
+    cmd: mvn spring-javaformat:apply -Dcheckstyle.skip test > tests_logs.txt
     chdir: "{{ home_dir }}"
-  register: result
-  
-- local_action:
-    module: copy
-    content: "{{ result }}"
-    dest: /home/ubuntu/tests_logs.txt
