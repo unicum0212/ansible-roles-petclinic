@@ -9,4 +9,4 @@
 - local_action:
     module: copy
     content: "{{ result }}"
-    dest: "{{ home_dir }}/tests_logs.txt"
+    dest: /home/ubuntu/tests_logs.txt
