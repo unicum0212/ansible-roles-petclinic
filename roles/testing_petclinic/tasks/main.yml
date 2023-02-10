@@ -6,5 +6,7 @@
     chdir: "{{ home_dir }}"
   register: result
   
-- debug:
-    var: result > /home/ubuntu/tests-logs.txt
+- local_action:
+    module: copy
+    content: "{{ result }}"
+    dest: "{{ home_dir }}/tests_logs.txt"
