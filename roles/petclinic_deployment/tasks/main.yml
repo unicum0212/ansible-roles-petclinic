@@ -30,7 +30,7 @@
 
 - name: Deploy app
   shell:
-    cmd: mvn spring-boot:run -Dcheckstyle.skip -Dspring-boot.run.profiles=mysql > /de>
+    cmd: mvn spring-boot:run -Dcheckstyle.skip -Dspring-boot.run.profiles=mysql
     chdir: "{{ home_dir }}"
   register: result
   async: 600
