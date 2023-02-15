@@ -4,7 +4,6 @@
   apt:
     name: git
     state: latest
-    update_cache: yes
 
 - name: Pull repo
   git:
