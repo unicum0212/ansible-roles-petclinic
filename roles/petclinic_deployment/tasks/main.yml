@@ -21,13 +21,6 @@
     cmd: mvn spring-javaformat:apply
     chdir: "{{ home_dir }}"
 
-
-- name: Stop Apache Server
-  service:
-    name: apache2
-    state: stopped
-    enabled: false
-
 - name: Deploy app
   shell:
     cmd: mvn spring-boot:run -Dcheckstyle.skip </dev/null >/home/ubuntu/deployment_logs.txt 2>&1 &
