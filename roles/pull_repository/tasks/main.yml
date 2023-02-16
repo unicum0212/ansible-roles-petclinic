@@ -1,5 +1,10 @@
 ---
 # tasks file for pull_repository
+
+- name: Pause for 2 minutes untill all packages have been loaded
+  pause:
+   minutes: 2
+
 - name: Install git
   apt:
     name: git
