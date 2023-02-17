@@ -14,4 +14,4 @@
   git:
     repo: https://github.com/unicum0212/petclinic-java.git
     dest: "{{ home_dir }}"
-    version: dev
+#    version: dev
